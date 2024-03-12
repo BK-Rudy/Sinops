@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDetailMovie"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/layout_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin"
+        >
+
+        <ImageView
+            android:id="@+id/voltar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:scaleType="fitStart"
+            android:src="@drawable/icons8_back"
+            android:textAlignment="textStart"
+            app:tint="@color/primaryColor"
+            android:contentDescription="@string/seta_voltar" />
+
+        <ImageView
+            android:id="@+id/fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/icons8_hearts"
+            app:tint="@android:color/holo_red_dark"
+            android:contentDescription="@string/icone_de_favorito" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryColor"
+        style="@style/style_subtitle"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgDetailView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+         android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:contentDescription="@string/banner_do_filme_selecionado"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detalhes"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/primaryColor"
+                style="@style/style_subtitle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lancamento"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="2"/>
+                <TextView
+                    android:id="@+id/lancamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rating"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="2"/>
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/elenco"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="2"/>
+                <TextView
+                    android:id="@+id/elenco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classificacao"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="2"/>
+                <TextView
+                    android:id="@+id/classificacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_margin"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/sinopseHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sinopse"
+                android:textColor="@color/primaryColor"
+                style="@style/style_subtitle" />
+
+            <TextView
+                android:id="@+id/sinopse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/style_text" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

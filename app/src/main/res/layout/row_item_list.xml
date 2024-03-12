@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/cardViewStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="99dp"
+            android:layout_height="108dp"
+            android:contentDescription="@string/imagem_filme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/title"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <ImageView
+            android:id="@+id/releaseDateIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:contentDescription="@string/localizacao_text"
+            android:src="@drawable/icons8_calendar"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle"
+            app:tint="@color/primaryColor" />
+
+        <TextView
+            android:id="@+id/releaseDateText"
+            android:layout_width="89dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toEndOf="@id/releaseDateIcon"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+        <ImageView
+            android:id="@+id/scoreIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:contentDescription="@string/duracao_text"
+            android:src="@drawable/icons8_rating_48"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateIcon"
+            app:tint="@color/primaryColor" />
+
+        <TextView
+            android:id="@+id/scoreDesc"
+            android:layout_width="83dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toEndOf="@id/scoreIcon"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
